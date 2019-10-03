@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'harry potter';
+    src: url(harrypotter.TTF);
+}
+
+:root {
+    --span-size: 25vmin;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+    z-index: 0;
+}
+
+div {
+    position: relative;
+}
+
+div#title {
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'harry potter';
+    text-transform: uppercase;
+    font-size: 3vh;
+    letter-spacing: 1rem;
+}
+
+div#title span {
+    padding: 0rem 2rem;
+}
+
+span#spell {
+    cursor: pointer;
+}
+
+div#content {
+    width: 100vw;
+    height: 95vh;
+    max-height: 95vh;
+    padding: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.character {
+    height: 33%;
+    display: flex;
+}
+
+div#content img {
+    display: block;
+    max-height: 100%;
+    width: 10vw;
+    margin-right: 1rem;
+}
+
+#eventDivSpan {
+    box-shadow: 0 0 0 200vmax black;
+    z-index: 1;
+}
+
+#eventDivSpan.show {
+    position: absolute;
+    display: block;
+    width: var(--span-size);
+    height: var(--span-size);
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 calc(var(--span-size)/5) calc(var(--span-size)/5) white, 0 0 calc(var(--span-size)/2) calc(var(--span-size)/2) white, 0 0 0 200vmax black;
+    border-radius: 50%;
+}
